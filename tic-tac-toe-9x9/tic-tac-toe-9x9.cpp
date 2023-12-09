@@ -27,12 +27,13 @@ int main()
         cout << "!" << endl;
         
         player=(player%2)?1:2;
-        cout << "Player " << player << ", enter a number of matrix:  ";
+        mark = (player == 1) ? 'X' : 'O';
+        printf("Player %d (%c), enter a number of matrix:  ", player, mark);
         cin >> matrix;
-        cout << "Player " << player << ", enter a number of cell:  ";
+        printf("Player %d (%c), enter a number of cell:  ", player, mark);
         cin >> choice;
         matrix -= 1; choice -= 1;
-        mark=(player == 1) ? 'X' : 'O';
+        
         
 
         if (0 <= choice && choice <= 8 && 0 <= matrix && matrix <= 8 && (squareMatrix[matrix][choice] != 'X' && squareMatrix[matrix][choice] != 'O')) {
